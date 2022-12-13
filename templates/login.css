@@ -555,12 +555,17 @@ form {
   margin-left: 40%;
 }
 
+input {
+  height: 40px;
+}
 
 #form-text {
   font-size: 8px;
 }
 
-
+#link {
+  color: #e67e22;
+}
 
 /*****************************/
 /* FOOTTER */

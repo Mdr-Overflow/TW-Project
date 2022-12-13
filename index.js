@@ -8,25 +8,26 @@ const homePageStyle = fs.readFileSync(
   "utf8"
 );
 const server = http.createServer((req, res) => {
-  const pathName = req.url;
-  if (pathName === "/" || pathName === "/home") {
-    res.writeHead(200, {
-      "Content-Type": "text/html",
-    });
-    res.end(homePage);
-  } else if (pathName === "/home-style.css") {
-    res.writeHead(200, {
-      "Content-Type": "text/css",
-    });
-    res.end(homePageStyle);
-  } else if (pathName === "/buy-a-car") {
-    res.end("Hello, buyer!");
-  } else {
-    res.writeHead(404, {
-      "Content-Type": "text/html",
-    });
-    res.end("<h1>Page not found</h1>");
-  }
+  res.end("Welcome")
+  // const pathName = req.url;
+  // if (pathName === "/" || pathName === "/home") {
+  //   res.writeHead(200, {
+  //     "Content-Type": "text/html",
+  //   });
+  //   res.end(homePage);
+  // } else if (pathName === "/home-style.css") {
+  //   res.writeHead(200, {
+  //     "Content-Type": "text/css",
+  //   });
+  //   res.end(homePageStyle);
+  // } else if (pathName === "/buy-a-car") {
+  //   res.end("Hello, buyer!");
+  // } else {
+  //   res.writeHead(404, {
+  //     "Content-Type": "text/html",
+  //   });
+  //   res.end("<h1>Page not found</h1>");
+  // }
 });
 
 const port = 8000;
